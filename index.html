@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <title>MiisoftDev – Premium Digital Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium dizayn və frontend xidmətləri – MiisoftDev">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="container">
+<!-- LOADER -->
+<div id="loader"><div class="loader-logo"><img src="logo.jpg" alt=""></div></div>
+<div class="cursor"></div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="logo">
     <div class="logo-box"><img src="logo.jpg" alt=""></div>
-    
   </div>
   <nav>
     <ul class="nav-links">
@@ -21,11 +25,7 @@
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Əlaqə</a></li>
     </ul>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
@@ -34,15 +34,21 @@
   <span class="bg-text">MIISOFT</span>
   <div class="light-blob blue"></div>
   <div class="light-blob purple"></div>
+
   <div class="hero-inner reveal">
     <div class="hero-left">
       <h1>Biz sadəcə <span>vebsayt</span> yaratmırıq</h1>
       <p>Biz brendlər üçün diqqət çəkən, premium və satış gətirən rəqəmsal təcrübələr qururuq.</p>
+
       <button id="startProjectBtn">Layihəyə başla</button>
+
+      <!-- ADD: HERO PROOF -->
+      <p class="hero-proof">🚀 20+ layihə • Premium dizayn • Real nəticələr</p>
     </div>
+
     <div class="hero-right">
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
-      <img class="floating" src="https://images.unsplash.com/photo-1558655146-d09347e92766" />
+      <img loading="lazy" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+      <img loading="lazy" class="floating" src="https://images.unsplash.com/photo-1558655146-d09347e92766" />
     </div>
   </div>
 </section>
@@ -51,9 +57,8 @@
 <section class="section">
   <span class="bg-text">HAQQIMIZDA</span>
   <div class="section-inner about reveal">
-     <div class="about-img">
-      <!-- ABOUT üçün uyğun premium şəkil -->
-      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="MiisoftDev about" />
+    <div class="about-img">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984" />
     </div>
 
     <div class="about-text">
@@ -67,8 +72,14 @@
       <p>
         Məqsədimiz istifadəçinin sayta baxdığı ilk anda
         keyfiyyəti hiss etməsi və markaya etibar formalaşdırmasıdır.
-        Bizim üçün hər detal — sürət, görünüş və istifadə rahatlığı — önəmlidir.
       </p>
+
+      <!-- ADD: WHY US -->
+      <div class="about-features">
+        <div><strong>⚡ Sürət</strong><span>Yüksək performans</span></div>
+        <div><strong>🎨 Premium UI</strong><span>Fərqlənən dizayn</span></div>
+        <div><strong>📈 Satış Fokus</strong><span>Biznes yönümlü</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -78,17 +89,17 @@
   <span class="bg-text">XİDMƏTLƏR</span>
   <div class="section-inner services reveal">
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
       <h3>Vebsayt Dizayn</h3>
       <p>Premium UI/UX, animasiyalı dizayn</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
       <h3>Frontend İnkişaf</h3>
       <p>HTML, CSS, JS, Vue əsaslı kod</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" />
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
       <h3>Sosial Media</h3>
       <p>Instagram & Telegram texniki həllər</p>
     </div>
@@ -98,37 +109,80 @@
 <!-- PORTFOLIO -->
 <section class="section" id="portfolio">
   <span class="bg-text">PORTFOLIO</span>
+
   <div class="portfolio reveal">
+
     <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" />
+      <img loading="lazy"
+           src="Ekran görüntüsü 2025-12-16 010049.png"
+           alt="Business Website">
       <div class="overlay">
         <h3>Business Website</h3>
         <span>UI / UX / Frontend</span>
+     <a class="case-btn"
+   data-title="Dental Website"
+   data-desc="Müştəri üçün hazırlanmış modern biznes saytı. UX və sürət ön plandadır."
+   data-img="Ekran görüntüsü 2025-12-16 010049.png"
+   data-link="https://example.com">
+   Case study
+</a>
       </div>
     </div>
+
     <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" />
+      <img loading="lazy"
+           src="Ekran görüntüsü 2.png"
+           alt="Landing Page">
       <div class="overlay">
-        <h3>Startup Landing</h3>
+        <h3>Menu Website</h3>
         <span>Design / Code</span>
+        <a class="case-btn"
+   data-title="Business Website"
+   data-desc="Müştəri üçün hazırlanmış modern biznes saytı. UX və sürət ön plandadır."
+   data-img="Ekran görüntüsü 2.png"
+   data-link="https://example.com">
+   Case study
+</a>
       </div>
     </div>
+
     <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9" />
+      <img loading="lazy"
+           src="Ekran görüntüsü 3.png"
+           alt="Agency Website">
       <div class="overlay">
-        <h3>Agency Site</h3>
-        <span>Animation / UX</span>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" />
-      <div class="overlay">
-        <h3>Creative Project</h3>
+        <h3>Menu Website</h3>
         <span>Premium UI</span>
+       <a class="case-btn"
+   data-title="Business Website"
+   data-desc=" Müştərimiz üçün hazırlanmış interaktiv restoran menyusu. Rəqəmsal görünüş və istifadə rahatlığı ön plandadır"
+   data-img="Ekran görüntüsü 3.png"
+   data-link="https://example.com">
+   Case study
+</a>
       </div>
     </div>
+
+    <div class="portfolio-item">
+      <img loading="lazy"
+           src="Ekran görüntüsü 4.png"
+           alt="Startup Project">
+      <div class="overlay">
+        <h3>Menu Website</h3>
+        <span>Frontend</span>
+ <a class="case-btn"
+   data-title="Business Website"
+   data-desc="Amerikadan olan müştərimiz üçün hazırlanmış premium biznes saytı. UX və sürət ön plandadır."
+   data-img="Ekran görüntüsü 4.png"
+   data-link="https://example.com">
+   Case study
+</a>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="section dark">
@@ -139,23 +193,66 @@
     <input type="email" placeholder="Email" />
     <textarea placeholder="Mesajınız"></textarea>
     <button onclick="sendForm()">Göndər</button>
+
+    <!-- ADD: TRUST -->
+    <p class="contact-trust">🔒 Məlumatlarınız gizli saxlanılır • 24 saat ərzində cavab</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>© 2025 MiisoftDev – Premium Digital Studio</footer>
+<!-- CASE STUDY MODAL -->
+<div class="case-modal" id="caseModal">
+  <div class="case-modal-inner">
+    <span class="close-modal">&times;</span>
 
-<!-- EXTRAS -->
-<div id="loader"><div class="loader-logo"><img src="logo.jpg" alt=""></div></div>
-<div class="cursor"></div>
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span id="closeModal">&times;</span>
-    <img id="modalImg" />
-    <h3 id="modalTitle"></h3>
-    <p>Bu layihə premium dizayn və frontend həlli ilə hazırlanıb.</p>
+    <img id="caseImg" src="" alt="Project image">
+
+    <h2 id="caseTitle">Project title</h2>
+    <p id="caseDesc">
+      Layihə haqqında qısa məlumat burada olacaq. Bu hissə dinamik dəyişir.
+    </p>
+
+    <div class="tech">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+
+  <!-- CASE STUDY MODAL -->
+<div class="case-modal" id="caseModal">
+  <div class="case-modal-inner">
+    <span class="close-modal">&times;</span>
+
+    <img id="caseImg" src="" alt="Project image">
+
+    <h2 id="caseTitle">Project title</h2>
+    <p id="caseDesc">
+      Layihə haqqında qısa məlumat burada olacaq. Bu hissə dinamik dəyişir.
+    </p>
+
+    <div class="tech">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+
+    <a id="caseLink" href="#" target="_blank" class="live-btn">
+      Canlı bax
+    </a>
   </div>
 </div>
+  </div>
+</div>
+<!-- FORM MODAL -->
+<div class="form-modal" id="formModal">
+  <div class="form-modal-inner">
+    <span class="close-form-modal">&times;</span>
+    <p id="formModalText">Mesajınız göndərildi!</p>
+  </div>
+</div>
+
+</div>
+
 
 <script src="script.js"></script>
 </body>
