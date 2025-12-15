@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiisoftDev – Premium Digital Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-box"><img src="logo.jpg" alt=""></div>
+    
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#services">Xidmətlər</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Əlaqə</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="bg-text">MIISOFT</span>
+  <div class="light-blob blue"></div>
+  <div class="light-blob purple"></div>
+  <div class="hero-inner reveal">
+    <div class="hero-left">
+      <h1>Biz sadəcə <span>vebsayt</span> yaratmırıq</h1>
+      <p>Biz brendlər üçün diqqət çəkən, premium və satış gətirən rəqəmsal təcrübələr qururuq.</p>
+      <button id="startProjectBtn">Layihəyə başla</button>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+      <img class="floating" src="https://images.unsplash.com/photo-1558655146-d09347e92766" />
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <span class="bg-text">HAQQIMIZDA</span>
+  <div class="section-inner about reveal">
+     <div class="about-img">
+      <!-- ABOUT üçün uyğun premium şəkil -->
+      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="MiisoftDev about" />
+    </div>
+
+    <div class="about-text">
+      <h2>MiisoftDev kimdir?</h2>
+      <p>
+        MiisoftDev olaraq hər layihəyə sadəcə bir veb sayt kimi yanaşmırıq.
+        Dizayn, animasiya və funksionallığı bir araya gətirərək
+        brendlər üçün <strong>yaddaqalan və premium rəqəmsal təcrübələr</strong>
+        yaradırıq.
+      </p>
+      <p>
+        Məqsədimiz istifadəçinin sayta baxdığı ilk anda
+        keyfiyyəti hiss etməsi və markaya etibar formalaşdırmasıdır.
+        Bizim üçün hər detal — sürət, görünüş və istifadə rahatlığı — önəmlidir.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section dark" id="services">
+  <span class="bg-text">XİDMƏTLƏR</span>
+  <div class="section-inner services reveal">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+      <h3>Vebsayt Dizayn</h3>
+      <p>Premium UI/UX, animasiyalı dizayn</p>
+    </div>
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
+      <h3>Frontend İnkişaf</h3>
+      <p>HTML, CSS, JS, Vue əsaslı kod</p>
+    </div>
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" />
+      <h3>Sosial Media</h3>
+      <p>Instagram & Telegram texniki həllər</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+  <span class="bg-text">PORTFOLIO</span>
+  <div class="portfolio reveal">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" />
+      <div class="overlay">
+        <h3>Business Website</h3>
+        <span>UI / UX / Frontend</span>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" />
+      <div class="overlay">
+        <h3>Startup Landing</h3>
+        <span>Design / Code</span>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9" />
+      <div class="overlay">
+        <h3>Agency Site</h3>
+        <span>Animation / UX</span>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" />
+      <div class="overlay">
+        <h3>Creative Project</h3>
+        <span>Premium UI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <span class="bg-text">ƏLAQƏ</span>
+  <div class="section-inner contact reveal">
+    <h2>Layihənizi danışaq</h2>
+    <input type="text" placeholder="Adınız" />
+    <input type="email" placeholder="Email" />
+    <textarea placeholder="Mesajınız"></textarea>
+    <button onclick="sendForm()">Göndər</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>© 2025 MiisoftDev – Premium Digital Studio</footer>
+
+<!-- EXTRAS -->
+<div id="loader"><div class="loader-logo"><img src="logo.jpg" alt=""></div></div>
+<div class="cursor"></div>
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <img id="modalImg" />
+    <h3 id="modalTitle"></h3>
+    <p>Bu layihə premium dizayn və frontend həlli ilə hazırlanıb.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
