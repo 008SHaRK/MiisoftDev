@@ -745,6 +745,20 @@ footer {
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media(max-width:900px){
+  .section-inner {
+    padding: 0 20px; /* daha dar padding mobil üçün */
+  }
+
+  .hero-inner,
+  .about,
+  .services,
+  .portfolio,
+  .contact {
+    padding-top: 100px; /* header hündürlüyü ilə uyğunlaşdır */
+  }
+}
+
+@media(max-width:900px){
   .header{
     padding:20px 30px;
     margin-bottom: 20px; /* header-dən sonra boşluq */
