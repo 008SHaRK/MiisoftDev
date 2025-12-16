@@ -142,3 +142,28 @@ modal.onclick = (e) => {
     modal.classList.remove("active");
   }
 };
+
+// SAYTA İLK GİRİŞDƏ NEWS POPUP
+window.addEventListener("load", () => {
+  const newsModal = document.getElementById("newsModal");
+  const closeNews = document.querySelector(".close-news-modal");
+
+  newsModal.classList.add("active");
+
+  closeNews.onclick = () => newsModal.classList.remove("active");
+
+  newsModal.onclick = (e) => {
+    if (e.target === newsModal) newsModal.classList.remove("active");
+  };
+});
+
+document.querySelectorAll('.view-indicator').forEach(indicator=>{
+  indicator.addEventListener('click', ()=>{
+    const modal = document.getElementById("caseModal");
+    document.getElementById("caseImg").src = indicator.dataset.img;
+    document.getElementById("caseTitle").textContent = indicator.dataset.title;
+    document.getElementById("caseDesc").textContent = indicator.dataset.desc;
+    document.getElementById("caseLink").href = indicator.dataset.link;
+    modal.classList.add('active');
+  });
+});

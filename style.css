@@ -782,3 +782,199 @@ footer {
   .hero h1{ font-size:2.5rem; }
   .bg-text{ font-size: clamp(1.2rem,12vw,4rem); }
 }
+/* MOBILE HORIZONTAL SCROLL BLOQ */
+html, body {
+  overflow-x: hidden; /* horizontal scrollu bağlayır */
+}
+
+.section-inner,
+.hero-inner,
+.about,
+.services,
+.portfolio,
+.hero-right img,
+img {
+  max-width: 100%; /* container-dən kənara çıxmağı qarşısını alır */
+}
+
+@media (max-width: 900px){
+  .hero-right img.floating {
+    display: none; /* mobil üçün float şəkli gizlədir */
+  }
+}
+/* TEXTAREA STATİK */
+.contact textarea {
+  resize: none;        /* istifadəçi ölçünü dəyişə bilməz */
+  overflow-y: auto;    /* yalnız vertical scroll lazım olduqda */
+  overflow-x: hidden;  /* horizontal scroll olmayacaq */
+  white-space: pre-wrap; /* uzun sətirlər avtomatik wrap olsun */
+}
+/* FORM INPUTLAR & TEXTAREA EYNİ ÖLÇÜ */
+.contact input,
+.contact textarea {
+  width: 100%;          /* container-ə uyğun genişlik */
+  max-width: 100%;      /* kənara çıxmasın */
+  min-height: 50px;     /* minimum hündürlük */
+  padding: 12px 16px;   /* iç boşluq */
+  border-radius: 12px;  /* radius eyni olsun */
+  border: none;
+  background: #0b1220;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box; /* padding daxilində ölçü */
+  resize: none;           /* textarea-nın drag ilə böyüməsi bağlanır */
+  overflow-x: hidden;     /* horizontal scroll bağla */
+}
+
+/* TEXTAREA HƏLƏ VERTİKAL DƏYİŞƏ BİLƏR */
+.contact textarea {
+  min-height: 120px; /* textarea bir az hündür olsun */
+  overflow-y: auto;  /* lazım olduqda vertical scroll */
+}
+/* ================= NEWS MODAL ================= */
+.news-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 18, 32, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.news-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.news-modal-inner {
+  background: linear-gradient(135deg, #1f2a45, #3b4b6b);
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  position: relative;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.news-modal.active .news-modal-inner {
+  transform: scale(1);
+}
+
+.close-news-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.close-news-modal:hover {
+  transform: rotate(90deg);
+}
+.news-modal-inner h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #1f7aff;
+  font-weight: 700;
+}
+
+.news-modal-inner p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: left; /* səliqəli blok görünüşü üçün */
+}
+
+.news-modal-inner strong {
+  color: #7c3aed; /* vurğulamaq üçün fərqli rəng */
+}
+
+/* PORTFOLIO ITEM */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;       /* kartın hündürlüyünü doldurur */
+  object-fit: cover;  /* şəkil kartı tam doldurur */
+  display: block;
+  border-radius: 16px;
+}
+
+
+
+/* Overlay daha tünd olsun */
+.portfolio-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Həmişə tünd */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.portfolio-item .overlay-text {
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(31, 122, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+/* View düyməsi */
+.view-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.view-indicator span {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Hover zamanı kiçik animasiya */
+.view-indicator:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: translate(-50%, -50%) scale(1.1);
+}
