@@ -744,17 +744,26 @@ footer {
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
-@media(max-width:900px){
+@media (max-width: 900px) {
   .section-inner {
-    padding: 0 20px; /* daha dar padding mobil üçün */
+    padding: 0 15px; /* sağdan boşluğu minimuma endir */
   }
 
-  .hero-inner,
-  .about,
-  .services,
-  .portfolio,
-  .contact {
-    padding-top: 100px; /* header hündürlüyü ilə uyğunlaşdır */
+  .portfolio {
+    grid-template-columns: 1fr 1fr; /* daha dar ekran üçün */
+    gap: 15px;
+  }
+
+  /* Absolute/fixed elementləri gizlət */
+  .light-blob,
+  .hero-right img.floating {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -799,6 +808,9 @@ footer {
 /* MOBILE HORIZONTAL SCROLL BLOQ */
 html, body {
   overflow-x: hidden; /* horizontal scrollu bağlayır */
+}
+body {
+  overflow-x: hidden;
 }
 
 .section-inner,
